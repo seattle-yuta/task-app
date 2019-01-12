@@ -66,7 +66,7 @@ https://ruby-rails.hatenadiary.com/entry/20141021/1413819783
 
 https://vuex.vuejs.org/ja/installation.html
 
-```npm install vuex --save```
+```yarn add vuex```
 
 5. Vue-Router
 
