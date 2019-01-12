@@ -1,4 +1,4 @@
-# docker-training-kit
+# 構築手順
 
 1. イメージをビルド
 
@@ -47,3 +47,8 @@
 8. データベースの作成
 
 ```docker-compose run --rm web rails db:create```
+
+# 追加インストール
+
+# 追加インストール
+
