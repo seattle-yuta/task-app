@@ -18,31 +18,22 @@
 
 5. config/database.ymlの編集
 
-```default: &default```
+  ~~~default: &default
+    adapter: mysql2
+    encoding: utf8
+    pool: 5
+    username: root
+    password: <%= ENV['MYSQL_ROOT_PASSWORD'] %>
+    host: db
 
-  ```adapter: mysql2```
-  
-  ```encoding: utf8```
-  
-  ```pool: 5```
-  ```username: root```
-  
-  ```password: <%= ENV['MYSQL_ROOT_PASSWORD'] %>```
-  
-  ```host: db```
-  
-```development:```
+  development:
+    <<: *default
+    database: myapp_development
 
-  ```<<: *default```
-  
-  ```database: myapp_development```
-  
-```test:```
-
-  ```<<: *default```
-  
-  ```database: myapp_test```
-  
+  test:
+    <<: *default
+    database: myapp_test~~~
+    
 
 6. イメージをビルド（再）
 
