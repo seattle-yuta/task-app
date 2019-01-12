@@ -18,7 +18,8 @@
 
 5. config/database.ymlの編集
 
-  ~~~default: &default
+  ~~~
+  default: &default
     adapter: mysql2
     encoding: utf8
     pool: 5
@@ -32,9 +33,9 @@
 
   test:
     <<: *default
-    database: myapp_test~~~
+    database: myapp_test
+  ~~~
     
-
 6. イメージをビルド（再）
 
 ```docker-compose build --no-cache```
