@@ -48,7 +48,9 @@
 
 ```docker-compose run --rm web rails db:create```
 
-# 追加インストール
+---
+
+# テスト自動化
 
 1. Rspec
 
@@ -62,23 +64,27 @@ https://qiita.com/tbpgr/items/f5be21d8e19dd852d9b7
 
 https://ruby-rails.hatenadiary.com/entry/20141021/1413819783
 
-4. Vuex
+# vue.js 拡張
+
+4. vuex
 
 https://vuex.vuejs.org/ja/installation.html
 
-5. Vue-Router
+5. vue-router
 
 https://router.vuejs.org/ja/installation.html
 
-6. CoreUI
+6. coreui for vue
 
 https://github.com/coreui/coreui-vue/
 
-7. graphQL
+# API
+
+7. graphQL (API Server)
 
 https://qiita.com/yuta-ushijima/items/6f800f20c83e79e6de64
   
-8. Vue-Appllo
+8. Vue-Appllo (API Client)
 
 https://akryum.github.io/vue-apollo/guide/installation.html#vue-cli-plugin
 
