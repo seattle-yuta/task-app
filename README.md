@@ -78,15 +78,15 @@ https://github.com/coreui/coreui-vue/
 7. graphQL
 https://qiita.com/yuta-ushijima/items/6f800f20c83e79e6de64
 
-	~~~
+~~~
   # Gemfile
-		gem 'graphql'
-  ~~~
+  gem 'graphql'
+~~~
   
-  ~~~
-	# Rails Server
-		rails g graphql:install
-  ~~~
+~~~
+# Rails Server
+rails g graphql:install
+~~~
   
 8. Vue-Appllo
 https://akryum.github.io/vue-apollo/guide/installation.html#vue-cli-plugin
