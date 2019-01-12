@@ -68,6 +68,9 @@
   
   https://morizyun.github.io/blog/enumerize-i18n-enum-rails-ruby/index.html
 
+　5. i18n
+ https://railsguides.jp/i18n.html
+
 ### 3. vue.js 拡張
 
   1. vuex
