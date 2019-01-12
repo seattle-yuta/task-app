@@ -1,4 +1,4 @@
-# 1. 構築手順
+### 1. 構築手順
 
   1. イメージをビルド
 
@@ -50,7 +50,7 @@
 
 ---
 
-# 2. Rails 拡張
+### 2. Rails 拡張
 
   1. Rspec
 
@@ -68,7 +68,7 @@
   
   https://morizyun.github.io/blog/enumerize-i18n-enum-rails-ruby/index.html
 
-# 3. vue.js 拡張
+### 3. vue.js 拡張
 
   1. vuex
 
@@ -82,7 +82,7 @@
 
   https://github.com/coreui/coreui-vue/
 
-# 4. API
+### 4. API
 
   1. graphQL (API Server)
 
