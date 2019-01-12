@@ -41,7 +41,7 @@
 
   ```<<: *default```
   
-  ```database: myapp_test``````
+  ```database: myapp_test```
   
 
 6. イメージをビルド（再）
