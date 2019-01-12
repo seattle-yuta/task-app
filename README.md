@@ -66,7 +66,7 @@
 
   4. Enumerize
   
-  https://doruby.jp/users/TM/entries/Rails_Enumerize\_
+  https://morizyun.github.io/blog/enumerize-i18n-enum-rails-ruby/index.html
 
 # 3. vue.js 拡張
 
