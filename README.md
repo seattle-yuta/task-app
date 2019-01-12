@@ -66,14 +66,17 @@ https://ruby-rails.hatenadiary.com/entry/20141021/1413819783
 
 https://vuex.vuejs.org/ja/installation.html
 
-```yarn add vuex```
+~~~
+# Execute On Rails Server
+npm install vuex --save
+~~~
 
 5. Vue-Router
 
 https://router.vuejs.org/ja/installation.html
 
 ~~~
-# Rails Server
+# Execute On Rails Server
 npm install vue-router --save
 ~~~
 
@@ -82,7 +85,7 @@ npm install vue-router --save
 https://github.com/coreui/coreui-vue/
 
 ~~~
-# Rails Server
+# Execute On Rails Server
 npm install @coreui/vue --save
 ~~~
 
@@ -91,12 +94,12 @@ npm install @coreui/vue --save
 https://qiita.com/yuta-ushijima/items/6f800f20c83e79e6de64
 
 ~~~
-# Gemfile
+# Append To Gemfile
 gem 'graphql'
 ~~~
   
 ~~~
-# Rails Server
+# Execute On Rails Server
 rails g graphql:install
 ~~~
   
@@ -105,7 +108,7 @@ rails g graphql:install
 https://akryum.github.io/vue-apollo/guide/installation.html#vue-cli-plugin
 
 ~~~
-# Rails Server
+# Execute On Rails Server
 yarn add vue-apollo graphql apollo-client apollo-link apollo-link-http apollo-cache-inmemory graphql-tag
 ~~~
 
