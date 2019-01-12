@@ -50,41 +50,43 @@
 
 ---
 
-# 2. テスト自動化
+# 2. Rails 拡張
 
   1. Rspec
 
-https://qiita.com/luckypool/items/e3662170033347510c3c
+  https://qiita.com/luckypool/items/e3662170033347510c3c
 
   2. Guard
 
-https://qiita.com/tbpgr/items/f5be21d8e19dd852d9b7
+  https://qiita.com/tbpgr/items/f5be21d8e19dd852d9b7
 
   3. rspec-rails / guard-rspec
 
-https://ruby-rails.hatenadiary.com/entry/20141021/1413819783
+  https://ruby-rails.hatenadiary.com/entry/20141021/1413819783
+
+  4. Enumerize
+  https://doruby.jp/users/TM/entries/Rails_Enumerize_
 
 # 3. vue.js 拡張
 
   1. vuex
 
-https://vuex.vuejs.org/ja/installation.html
+  https://vuex.vuejs.org/ja/installation.html
 
   2. vue-router
 
-https://router.vuejs.org/ja/installation.html
+  https://router.vuejs.org/ja/installation.html
 
   3. coreui for vue
 
-https://github.com/coreui/coreui-vue/
+  https://github.com/coreui/coreui-vue/
 
 # 4. API
 
   1. graphQL (API Server)
 
-https://qiita.com/yuta-ushijima/items/6f800f20c83e79e6de64
+  https://qiita.com/yuta-ushijima/items/6f800f20c83e79e6de64
   
   2. Vue-Appllo (API Client)
 
-https://akryum.github.io/vue-apollo/guide/installation.html#vue-cli-plugin
-
+  https://akryum.github.io/vue-apollo/guide/installation.html#vue-cli-plugin
