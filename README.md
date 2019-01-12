@@ -66,7 +66,7 @@
 
   4. Enumerize
   
-  https://doruby.jp/users/TM/entries/Rails_Enumerize_
+  "https://doruby.jp/users/TM/entries/Rails_Enumerize_"
 
 # 3. vue.js 拡張
 
