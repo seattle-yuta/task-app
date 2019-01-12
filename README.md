@@ -72,14 +72,19 @@ https://vuex.vuejs.org/ja/installation.html
 
 https://router.vuejs.org/ja/installation.html
 
-
-```npm install vue-router --save```
+~~~
+# Rails Server
+npm install vue-router --save
+~~~
 
 6. CoreUI
 
 https://github.com/coreui/coreui-vue/
 
-```npm install @coreui/vue --save```
+~~~
+# Rails Server
+npm install @coreui/vue --save
+~~~
 
 7. graphQL
 
@@ -99,4 +104,8 @@ rails g graphql:install
 
 https://akryum.github.io/vue-apollo/guide/installation.html#vue-cli-plugin
 
-```yarn add vue-apollo graphql apollo-client apollo-link apollo-link-http apollo-cache-inmemory graphql-tag```
+~~~
+# Rails Server
+yarn add vue-apollo graphql apollo-client apollo-link apollo-link-http apollo-cache-inmemory graphql-tag
+~~~
+
