@@ -65,6 +65,7 @@
   https://ruby-rails.hatenadiary.com/entry/20141021/1413819783
 
   4. Enumerize
+  
   https://doruby.jp/users/TM/entries/Rails_Enumerize_
 
 # 3. vue.js 拡張
