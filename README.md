@@ -50,7 +50,7 @@
 
 ---
 
-# テスト自動化
+# 2.テスト自動化
 
   1. Rspec
 
@@ -64,7 +64,7 @@ https://qiita.com/tbpgr/items/f5be21d8e19dd852d9b7
 
 https://ruby-rails.hatenadiary.com/entry/20141021/1413819783
 
-# vue.js 拡張
+# 3.vue.js 拡張
 
   1. vuex
 
@@ -78,7 +78,7 @@ https://router.vuejs.org/ja/installation.html
 
 https://github.com/coreui/coreui-vue/
 
-# API
+# 4.API
 
   1. graphQL (API Server)
 
