@@ -50,5 +50,45 @@
 
 # 追加インストール
 
-# 追加インストール
+1. Rspec
+https://qiita.com/luckypool/items/e3662170033347510c3c
 
+2. Guard
+https://qiita.com/tbpgr/items/f5be21d8e19dd852d9b7
+
+3. rspec-rails / guard-rspec
+https://ruby-rails.hatenadiary.com/entry/20141021/1413819783
+
+4. Vuex
+https://vuex.vuejs.org/ja/installation.html
+
+```npm install vuex --save```
+
+5. Vue-Router
+https://router.vuejs.org/ja/installation.html
+
+
+```npm install vue-router --save```
+
+6. CoreUI
+https://github.com/coreui/coreui-vue/
+
+```npm install @coreui/vue --save```
+
+7. graphQL
+https://qiita.com/yuta-ushijima/items/6f800f20c83e79e6de64
+
+	~~~
+  # Gemfile
+		gem 'graphql'
+  ~~~
+  
+  ~~~
+	# Rails Server
+		rails g graphql:install
+  ~~~
+  
+8. Vue-Appllo
+https://akryum.github.io/vue-apollo/guide/installation.html#vue-cli-plugin
+
+```yarn add vue-apollo graphql apollo-client apollo-link apollo-link-http apollo-cache-inmemory graphql-tag```
