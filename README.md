@@ -79,8 +79,8 @@ https://github.com/coreui/coreui-vue/
 https://qiita.com/yuta-ushijima/items/6f800f20c83e79e6de64
 
 ~~~
-  # Gemfile
-  gem 'graphql'
+# Gemfile
+gem 'graphql'
 ~~~
   
 ~~~
