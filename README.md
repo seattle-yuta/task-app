@@ -1,22 +1,22 @@
-# 構築手順
+# 1.構築手順
 
-1. イメージをビルド
+  1. イメージをビルド
 
 ```docker-compose build --no-cache```
 
-2. webサーバのコンテナを開始する
+  2. webサーバのコンテナを開始する
 
 ```docker-compose run --rm web /bin/bash```
 
-3. railsアプリケーションを作成する(node.js,webpack,vue.js)
+  3. railsアプリケーションを作成する(node.js,webpack,vue.js)
 
 ```rails new . --webpack=vue --force --database=mysql```
 
-4. webサーバのコンテナを終了する
+  4. webサーバのコンテナを終了する
 
 ```exit```
 
-5. config/database.ymlの編集
+  5. config/database.ymlの編集
 
   ~~~
   default: &default
@@ -36,15 +36,15 @@
     database: myapp_test
   ~~~
     
-6. イメージをビルド（再）
+  6. イメージをビルド（再）
 
 ```docker-compose build --no-cache```
 
-7. コンテナを立ち上げる
+  7. コンテナを立ち上げる
 
 ```docker-compose up```
 
-8. データベースの作成
+  8. データベースの作成
 
 ```docker-compose run --rm web rails db:create```
 
@@ -52,39 +52,39 @@
 
 # テスト自動化
 
-1. Rspec
+  1. Rspec
 
 https://qiita.com/luckypool/items/e3662170033347510c3c
 
-2. Guard
+  2. Guard
 
 https://qiita.com/tbpgr/items/f5be21d8e19dd852d9b7
 
-3. rspec-rails / guard-rspec
+  3. rspec-rails / guard-rspec
 
 https://ruby-rails.hatenadiary.com/entry/20141021/1413819783
 
 # vue.js 拡張
 
-4. vuex
+  1. vuex
 
 https://vuex.vuejs.org/ja/installation.html
 
-5. vue-router
+  2. vue-router
 
 https://router.vuejs.org/ja/installation.html
 
-6. coreui for vue
+  3. coreui for vue
 
 https://github.com/coreui/coreui-vue/
 
 # API
 
-7. graphQL (API Server)
+  1. graphQL (API Server)
 
 https://qiita.com/yuta-ushijima/items/6f800f20c83e79e6de64
   
-8. Vue-Appllo (API Client)
+  2. Vue-Appllo (API Client)
 
 https://akryum.github.io/vue-apollo/guide/installation.html#vue-cli-plugin
 
