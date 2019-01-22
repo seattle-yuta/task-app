@@ -85,6 +85,8 @@
   3. coreui for vue
 
   https://github.com/coreui/coreui-vue/
+  
+  https://popper.js.org/
 
 ### 4. API
 
