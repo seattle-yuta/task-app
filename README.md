@@ -86,8 +86,14 @@
 
   https://github.com/coreui/coreui-vue/
   
+  popper.js(bootsrtap:依存）
+ 
   https://popper.js.org/
-
+  
+  JQuery.js(bootsrtap:依存）
+  
+  npm install jquery --save
+  
 ### 4. API
 
   1. graphQL (API Server)
