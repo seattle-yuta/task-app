@@ -88,11 +88,15 @@
   
   popper.js(bootsrtap:依存）
  
-  https://popper.js.org/
+  npm install popper --save
   
   JQuery.js(bootsrtap:依存）
   
   npm install jquery --save
+  
+  perfect-scrollbar.js(bootsrtap:依存）
+  npm install perfect-scrollbar
+  
   
 ### 4. API
 
