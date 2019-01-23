@@ -56,7 +56,7 @@
 
   https://qiita.com/luckypool/items/e3662170033347510c3c
 
-  2. Guard
+  2. Guard（記事内の「--no-ri --no-doc」は、「--no-document」に変わっているので注意）
 
   https://qiita.com/tbpgr/items/f5be21d8e19dd852d9b7
 
@@ -64,13 +64,13 @@
 
   https://ruby-rails.hatenadiary.com/entry/20141021/1413819783
 
-  4. Enumerize
+  4. Enumerize（おまけ）
   
   https://morizyun.github.io/blog/enumerize-i18n-enum-rails-ruby/index.html
 
-　5. i18n
+　  5. i18n（おまけ）
  
- https://railsguides.jp/i18n.html
+   https://railsguides.jp/i18n.html
 
 ### 3. vue.js 拡張
 
@@ -84,19 +84,15 @@
 
   3. coreui for vue
 
-  https://github.com/coreui/coreui-vue/
+  https://github.com/coreui/coreui-free-vue-admin-template
   
-  popper.js(bootsrtap:依存）
- 
-  npm install popper --save
+  ~~~
   
-  JQuery.js(bootsrtap:依存）
+  npmパッケージをgithubからインストール
   
-  npm install jquery --save
+  npm install coreui/coreui-free-vue-admin-template
   
-  perfect-scrollbar.js(bootsrtap:依存）
-  npm install perfect-scrollbar
-  
+  ~~~
   
 ### 4. API
 
