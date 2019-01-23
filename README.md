@@ -96,9 +96,7 @@
 
   ~~https://github.com/coreui/coreui-free-vue-admin-template~~
   
-  ~~
-  ~~npm install coreui/coreui-free-vue-admin-template --save~~
-  ~~
+  ~~npm install coreui/coreui-free-vue-admin-template --save~~~
   
 ### 4. API
 
