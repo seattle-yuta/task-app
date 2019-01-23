@@ -87,11 +87,9 @@
   https://github.com/coreui/coreui-free-vue-admin-template
   
   ~~~
+  ##### npmパッケージをgithubからインストール
   
-  npmパッケージをgithubからインストール
-  
-  npm install coreui/coreui-free-vue-admin-template
-  
+  npm install coreui/coreui-free-vue-admin-template  
   ~~~
   
 ### 4. API
