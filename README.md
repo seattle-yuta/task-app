@@ -78,18 +78,24 @@
 
   https://vuex.vuejs.org/ja/installation.html
 
+  ~~~
+  npm install vuex --save
+  ~~~
+  
   2. vue-router
 
   https://router.vuejs.org/ja/installation.html
-
-  3. coreui for vue
+  
+  ~~~
+  npm install vue-router --save
+  ~~~
+  
+  3. coreui for vue(npmパッケージをgithubからインストール)
 
   https://github.com/coreui/coreui-free-vue-admin-template
   
   ~~~
-  npmパッケージをgithubからインストール
-  
-  npm install coreui/coreui-free-vue-admin-template  
+  npm install coreui/coreui-free-vue-admin-template --save
   ~~~
   
 ### 4. API
@@ -101,3 +107,7 @@
   2. Vue-Appllo (API Client)
 
   https://akryum.github.io/vue-apollo/guide/installation.html#vue-cli-plugin
+  
+  ~~~
+  npm install --save vue-apollo graphql apollo-client apollo-link apollo-link-http apollo-cache-inmemory graphql-tag
+  ~~~
