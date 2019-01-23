@@ -90,13 +90,15 @@
   npm install vue-router --save
   ~~~
   
-  3. coreui for vue(npmパッケージをgithubからインストール)
+  3. coreui for vue <保留>
 
-  https://github.com/coreui/coreui-free-vue-admin-template
+  https://coreui.io/vue/
+
+  ~~https://github.com/coreui/coreui-free-vue-admin-template~~
   
-  ~~~
-  npm install coreui/coreui-free-vue-admin-template --save
-  ~~~
+  ~~
+  ~~npm install coreui/coreui-free-vue-admin-template --save~~
+  ~~
   
 ### 4. API
 
