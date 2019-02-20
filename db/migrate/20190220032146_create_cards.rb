@@ -7,6 +7,7 @@ class CreateCards < ActiveRecord::Migration[5.0]
       t.datetime :start_deadline
       t.datetime :end_deadline
       t.references :board_list, null: false
+      t.references :user, null: false
 
       t.timestamps
     end
