@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  string: MyString
+  display_order: MyString
+  string: MyString
+  achievement_flag: MyString
+  integer: MyString
+  check_list_id: MyString
+  reference: MyString
+
+two:
+  name: MyString
+  string: MyString
+  display_order: MyString
+  string: MyString
+  achievement_flag: MyString
+  integer: MyString
+  check_list_id: MyString
+  reference: MyString
