@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: 'project#index'
+  root to: 'projects#index'
+  namespace :api, format: 'json' do
+    resources :projects, only: [:index, :create, :update]
+  end
 end
