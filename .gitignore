@@ -32,4 +32,7 @@ yarn-debug.log*
 .yarn-integrity
 
 #Idea
-.idea
+.idea/
+
+/vendor
+.DS_Store

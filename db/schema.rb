@@ -13,49 +13,57 @@
 ActiveRecord::Schema.define(version: 2019_02_20_090835) do
 
   create_table "board_lists", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.integer "display_order"
-    t.integer "project_id"
+    t.integer "project_id", null: false
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["project_id"], name: "index_board_lists_on_project_id"
+    t.index ["user_id"], name: "index_board_lists_on_user_id"
   end
 
   create_table "cards", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.integer "display_order"
     t.string "detail"
     t.datetime "start_deadline"
     t.datetime "end_deadline"
-    t.integer "board_list_id"
+    t.integer "board_list_id", null: false
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["board_list_id"], name: "index_cards_on_board_list_id"
+    t.index ["user_id"], name: "index_cards_on_user_id"
   end
 
   create_table "check_items", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.integer "display_order"
-    t.integer "achievement_flag"
-    t.integer "check_list_id"
+    t.boolean "achievement_flag", default: false, null: false
+    t.integer "check_list_id", null: false
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["check_list_id"], name: "index_check_items_on_check_list_id"
+    t.index ["user_id"], name: "index_check_items_on_user_id"
   end
 
   create_table "check_lists", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.integer "display_order"
-    t.integer "display_flag"
-    t.integer "card_id"
+    t.boolean "display_flag", default: false, null: false
+    t.integer "card_id", null: false
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["card_id"], name: "index_check_lists_on_card_id"
+    t.index ["user_id"], name: "index_check_lists_on_user_id"
   end
 
   create_table "projects", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.integer "display_order"
+    t.string "name", null: false
+    t.integer "display_order", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -70,7 +78,10 @@ ActiveRecord::Schema.define(version: 2019_02_20_090835) do
   end
 
   create_table "users", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
+    t.string "mail", null: false
+    t.string "password_digest", null: false
+    t.string "remember_token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
