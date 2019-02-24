@@ -10,6 +10,8 @@
   </head>
 
   <body>
+    <%= link_to 'ログイン', login_path unless signed_in? %>
+    <%= link_to 'ログアウト', logout_path if signed_in? %>
     <%= yield %>
   </body>
 </html>

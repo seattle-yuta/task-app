@@ -32,7 +32,10 @@ yarn-debug.log*
 .yarn-integrity
 
 #Idea
-.idea
+.idea/
 
 docker/*
 db/schema.rb
+
+/vendor
+.DS_Store

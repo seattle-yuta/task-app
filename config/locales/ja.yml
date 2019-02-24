@@ -1,0 +1,44 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+      project: プロジェクト
+      bord_list: リスト
+      card: カード
+      check_list: チェックリスト
+      check_item: チェック項目
+    attributes:
+      user:
+        id: ID
+        name: 名前
+        mail: メールアドレス
+        password_digest: 暗号化パスワード
+        password: パスワード
+        password_confirmation: 確認用パスワード
+        remember_token: パスワードを記憶する
+      project:
+        id: ID
+        name: プロジェクト名
+        display_order: 表示順
+      bord_list:
+        id: ID
+        name: ボード名
+        display_order: 表示順
+      card:
+        id: ID
+        name: カード名
+        detail: 詳細
+        display_order: 表示順
+        deadline: 期限
+        start_deadline: 期限開始日
+        end_deadline: 期限終了日
+      check_list:
+        id: ID
+        name: チェックリスト名
+        display_order: 表示順
+        display_flag: 表示フラグ
+      check_item:
+        id: ID
+        name: 項目名
+        display_order: 表示順
+        achievement_flag: 達成フラグ
