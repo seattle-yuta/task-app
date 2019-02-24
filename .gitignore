@@ -34,4 +34,5 @@ yarn-debug.log*
 #Idea
 .idea
 
-docker/
+docker/*
+db/schema.rb
