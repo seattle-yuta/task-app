@@ -1,9 +1,10 @@
 <template>
-    <ul class="collection">
-        <li v-for="project in projects" v-bind:id="'row_project_' + project.id" class="collection-item">
-          <label v-bind:for="'project_' + project.id">{{ project.name }}</label>
-        </li>
-    </ul>
+    <div class="projects">
+        <div v-for="project in projects" v-bind:id="'row_project_' + project.id" class="project">
+          <label v-bind:for="'project_' + project.id">名前</label>
+            <router-link :to="{ name: 'BoardList', params: { project_id: project.id }} ">{{ project.name }}</router-link>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -28,3 +29,12 @@
         }
     }
 </script>
+
+<style scoped>
+    .project{
+        display: inline-block;
+        background-color:  #ccc;
+        padding: 50px;
+        margin : 30px;
+    }
+</style>

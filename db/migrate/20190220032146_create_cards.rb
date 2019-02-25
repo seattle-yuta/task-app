@@ -1,6 +1,6 @@
 class CreateCards < ActiveRecord::Migration[5.0]
   def change
-    create_table :cards do |t|
+    create_table :board_lists do |t|
       t.string :name, null: false
       t.integer :display_order
       t.string :detail

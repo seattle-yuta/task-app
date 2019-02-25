@@ -1,14 +1,14 @@
 import Vue from 'vue/dist/vue.esm.js'
 import VueRouter from 'vue-router'
 import Project from '../components/project'
-import List from '../components/list'
+import BoardList from '../components/board_list'
 
 Vue.use(VueRouter);
 
 export default new VueRouter({
     mode: 'history',
     routes: [
-        { path: '/list', component: List },
-        { path: '/project', component: Project}
+        { path: '/board_lists/:project_id', name: 'BoardList', component: BoardList },
+        { path: '/projects', component: Project}
     ],
 })

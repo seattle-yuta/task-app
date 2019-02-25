@@ -7,7 +7,8 @@
             <div class="nav-wrapper container">
                 <a href="/" class="brand-logo left">Todo Application</a>
                 <ul class="right hide-on-med-and-down">
-                    <li><router-link to="/">Top</router-link></li>
+                    <li><router-link to="/projects">project</router-link></li>
+                    <li><a href="/logout">ログアウト</a></li>
                 </ul>
                 <ul class="right hide-on-large-only">
                     <li>
