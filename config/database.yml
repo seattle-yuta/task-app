@@ -8,7 +8,7 @@ default: &default
 
 development:
   <<: *default
-  database: myapp_1_development
+  database: myapp_development
 
 test:
   <<: *default
