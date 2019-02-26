@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'projects#index'
   get '/projects', to: 'projects#index'
   get '/board_lists/:project_id', to: 'projects#index'
+  get '/cards', to: 'cards#index'
   get     'sign_up', to: 'users#new'
   post    'sign_up', to: 'users#create'
   get     'login',   to: 'sessions#new'
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
     resources :projects, only: [:index, :create, :update]
     get '/board_lists/:project_id', to: 'board_lists#index'
     resources :board_lists, only: [:create, :update]
+    resources :cards, only: [:index, :create, :update]
   end
 
 end

@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2019_02_20_090835) do
     t.index ["user_id"], name: "index_board_lists_on_user_id"
   end
 
-  create_table "board_lists", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "cards", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.integer "display_order"
     t.string "detail"
