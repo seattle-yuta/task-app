@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   namespace :api, format: 'json' do
     resources :projects, only: [:index, :create, :update]
     get '/board_lists/:project_id', to: 'board_lists#index'
+    resources :board_lists, only: [:create, :update]
   end
 
 end

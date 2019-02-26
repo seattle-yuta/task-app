@@ -12,7 +12,7 @@
     export default {data: function () {
             return {
                 projects: [],
-                newProject: ''
+                newProject: '',
             }
         }, mounted: function () {
             this.fetchProjects();

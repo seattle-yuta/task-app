@@ -3,4 +3,9 @@ class BoardList < ApplicationRecord
     belongs_to :project
 
     validates :name, presence: true
+
+    scope :desc_display_order, -> {
+        order(display_order: :desc)
+    }
+
 end

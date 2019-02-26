@@ -66,4 +66,8 @@ Rails.application.configure do
   config.web_console.whitelisted_ips = '0.0.0.0/0'
 
   config.x.webpacker[:dev_server_host] = "http://localhost:8080"
+
+  config.public_file_server.enabled = true
+
+  config.server_static_files = true
 end

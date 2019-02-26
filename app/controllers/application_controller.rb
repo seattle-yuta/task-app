@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :require_sign_in!, if: :use_before_action?
   helper_method :signed_in?
 
-  protect_from_forgery with: :exception
+  protect_from_forgery with: :null_session
 
   def current_user
     remember_token = User.encrypt(cookies[:user_remember_token])
@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
     remember_token = User.new_remember_token
     cookies.permanent[:user_remember_token] = remember_token
     user.update!(remember_token: User.encrypt(remember_token))
+    session[:user_id] = user.id
     @current_user = user
   end
 
