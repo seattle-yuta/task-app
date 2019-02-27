@@ -1,7 +1,6 @@
 class User < ApplicationRecord
   has_secure_password validations: true
-  has_many :user_projects, dependent: :delete_all
-  has_many :project, through: :user_projects
+  has_many :projects, dependent: :delete_all
 
   validates :name, presence: true, length: { maximum: 20 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

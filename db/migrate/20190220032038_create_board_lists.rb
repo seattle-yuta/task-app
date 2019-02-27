@@ -4,7 +4,7 @@ class CreateBoardLists < ActiveRecord::Migration[5.0]
       t.string :name, null: false
       t.integer :display_order
       t.references :project, null: false
-      t.references :user, null: false
+
 
       t.timestamps
     end

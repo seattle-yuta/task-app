@@ -1,6 +1,6 @@
 import Vue from 'vue/dist/vue.esm.js'
 import VueRouter from 'vue-router'
-import Project from '../components/project'
+import Project from '../components/project.vue'
 import BoardList from '../components/board_list'
 
 Vue.use(VueRouter);

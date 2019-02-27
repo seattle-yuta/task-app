@@ -5,7 +5,6 @@ class CreateCheckLists < ActiveRecord::Migration[5.0]
       t.integer :display_order
       t.boolean :display_flag, default: false, null: false
       t.references :card, null: false
-      t.references :user, null: false
 
       t.timestamps
     end

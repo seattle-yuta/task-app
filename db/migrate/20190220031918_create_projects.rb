@@ -3,6 +3,7 @@ class CreateProjects < ActiveRecord::Migration[5.0]
     create_table :projects do |t|
       t.string :name, null: false
       t.integer :display_order, null: false
+      t.references :user, null: false
 
       t.timestamps
     end

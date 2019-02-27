@@ -5,7 +5,6 @@ class CreateCheckItems < ActiveRecord::Migration[5.0]
       t.integer :display_order
       t.boolean :achievement_flag, default: false, null: false
       t.references :check_list, null: false
-      t.references :user, null: false
 
       t.timestamps
     end
