@@ -4,15 +4,15 @@
             <div class="input-area">
                 <h6 v-bind:for="'board_list_' + board_list.id" v-text="board_list.name" v-on:click="switchBoardListName" id="board-text"></h6>
                 <input type="text"
-                       v-model="updateBoardList.input" v-on:keyup.enter="updateBoardListName(board_list.id, index, arguments[0])" id="board-input" style="display: none">
+                       v-model="updateBoardList" v-on:keyup.enter="updateBoardListName(board_list.id, index, arguments[0])" id="board-input" style="display: none">
             </div>
             <ul v-for="edge in board_list.cards.edges" class="card-list">
                 <li v-bind:for="'card_' + edge.node.id" v-text="edge.node.name" v-on:click="" class="card"></li>
             </ul>
             <ul>
                 <li class="new-card">
-                    <input v-model="newCard" type="text" v-bind:id="board_list.id" class="form-control">
-                    <input type="button" value="カードを追加" v-on:click="createCard(board_list.id)" class="form-control" >
+                    <input v-model="allBoardLists[index].inputBox" type="text" v-bind:id="board_list.id" class="form-control">
+                    <input type="button" value="カードを追加" v-on:click="createCard" class="form-control" >
                 </li>
             </ul>
         </div>
@@ -45,6 +45,15 @@
      mutation createBoardList($name: String!, $project: ID!) {
         createBoardList(name: $name, project: $project) {
             boardList {
+                cards {
+                    edges {
+                        node {
+                            id
+                            name
+                            detail
+                        }
+                    }
+                }
               id
               name
             }
@@ -55,6 +64,15 @@
     mutation updateBoardList($id: ID!, $name: String!) {
         updateBoardList(id: $id, name: $name) {
             boardList {
+                cards {
+                    edges {
+                        node {
+                            id
+                            name
+                            detail
+                        }
+                    }
+                }
               id
               name
             }
@@ -63,18 +81,14 @@
     `
     const CREATE_CARD = gql`
      mutation createCard($name: String!, $boardList: ID!) {
-        createCard(name: $name, board_list: $boardList) {
-            cards {
-                edges {
-                    node {
-                        id
-                        name
-                        detail
-                    }
-                }
+        createCard(name: $name, boardList: $boardList) {
+            card {
+                  id
+                  name
             }
         }
-     }`
+    }
+    `
 
 export default {
     name: 'board_list',
@@ -101,7 +115,6 @@ export default {
                this.inputBox.push({ velue: 0 })
            })
        })
-        console.log(this.inputBoxs)
     },
     methods: {
         createBoardList: function() {
@@ -112,6 +125,7 @@ export default {
                     project: location.pathname.split('/')[2]
                 }
             }).then((response) => {
+                console.log(response.data.createBoardList.boardList.name)
                 this.allBoardLists.push(response.data.createBoardList.boardList);
                 this.newBoardList = ''
             }, (error) => {
@@ -134,14 +148,17 @@ export default {
                 console.log(error);
             });
         },
-        createCard: function (board_list_id) {
+        createCard: function (e) {
+            //要対応 variables　response
             this.$apollo.mutate({
                 mutation: CREATE_CARD,
                 variables: {
-                    id: board_list_id,
-                    name: this.newCard
+                    name: "aa",
+                    boardList: 1
                 }
             }).then((response) => {
+                console.log(e);
+                console.log(response);
                 this.board_list.cards.edges.push(response.data.createCard.board_list.cards.edges);
                 this.newCard = ''
             }, (error) => {

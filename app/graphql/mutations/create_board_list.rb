@@ -3,7 +3,7 @@ module Mutations
     null false
 
     argument :name, String, required: true
-    argument :project, ID, 'プロジェクトのID', required: true
+    argument :project, ID, required: true
 
     field :board_list, Types::BoardListType, null: false
 
