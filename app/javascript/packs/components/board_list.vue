@@ -4,7 +4,7 @@
             <div class="input-area">
                 <h6 v-bind:for="'board_list_' + board_list.id" v-text="board_list.name" v-on:click="switchBoardListName" id="board-text"></h6>
                 <input type="text"
-                       v-model="updateBoardList" v-on:keyup.enter="updateBoardListName(board_list.id, index, arguments[0])" id="board-input" style="display: none">
+                       v-model="updateBoardList.input" v-on:keyup.enter="updateBoardListName(board_list.id, index, arguments[0])" id="board-input" style="display: none">
             </div>
             <ul v-for="edge in board_list.cards.edges" class="card-list">
                 <li v-bind:for="'card_' + edge.node.id" v-text="edge.node.name" v-on:click="" class="card"></li>
@@ -81,6 +81,7 @@ export default {
     data () {
         return {
             list: [],
+            inputBox:[],
             allBoardLists: [],
             cards: [],
             newBoardList: '',
@@ -96,8 +97,11 @@ export default {
            }
        }).then(response => {
            this.allBoardLists = response.data.allBoardLists
-           console.log(response)
+           response.data.allBoardLists.forEach(s =>{
+               this.inputBox.push({ velue: 0 })
+           })
        })
+        console.log(this.inputBoxs)
     },
     methods: {
         createBoardList: function() {
