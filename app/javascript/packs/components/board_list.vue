@@ -6,9 +6,9 @@
                 <input type="text"
                        v-model="updateBoardList" v-on:keyup.enter="updateBoardListName(board_list.id, index, arguments[0])" id="board-input" style="display: none">
             </div>
-            <ul v-for="edge in board_list.cards.edges" class="card-list">
+            <draggable element="ul" :options="{ group: 'board_list.cards.edges' }" v-for="edge in board_list.cards.edges" class="card-list">
                 <li v-bind:for="'card_' + edge.node.id" v-text="edge.node.name" v-on:click="" class="card"></li>
-            </ul>
+            </draggable>
             <ul>
                 <li class="new-card">
                     <input v-model="allBoardLists[index].inputBox" type="text" v-bind:id="board_list.id" class="form-control">
@@ -25,6 +25,8 @@
 
 <script>
     import gql from 'graphql-tag'
+    import draggable from 'vuedraggable';
+
     const BOARD_LIST_QUERY = gql`
     query allBoardLists($project: ID!){
         allBoardLists(project: $project) {
@@ -93,6 +95,9 @@
 
 export default {
     name: 'board_list',
+    components: {
+        draggable,
+    },
     data () {
         return {
             list: [],
