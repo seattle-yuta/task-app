@@ -12,7 +12,7 @@
             <ul>
                 <li class="new-card">
                     <input v-model="allBoardLists[index].inputBox" type="text" v-bind:id="board_list.id" class="form-control">
-                    <input type="button" value="カードを追加" v-on:click="createCard" class="form-control" >
+                    <input type="button" value="カードを追加" v-on:click="createCard(board_list.id, index)" class="form-control" >
                 </li>
             </ul>
         </div>
@@ -83,8 +83,9 @@
      mutation createCard($name: String!, $boardList: ID!) {
         createCard(name: $name, boardList: $boardList) {
             card {
-                  id
-                  name
+                id
+                name
+                detail
             }
         }
     }
@@ -148,19 +149,17 @@ export default {
                 console.log(error);
             });
         },
-        createCard: function (e) {
+        createCard: function (board_list, index) {
             //要対応 variables　response
             this.$apollo.mutate({
                 mutation: CREATE_CARD,
                 variables: {
-                    name: "aa",
-                    boardList: 1
+                    name: this.allBoardLists[index].inputBox,
+                    boardList: board_list
                 }
             }).then((response) => {
-                console.log(e);
-                console.log(response);
-                this.board_list.cards.edges.push(response.data.createCard.board_list.cards.edges);
-                this.newCard = ''
+                this.allBoardLists[index].cards.edges.push({node: response.data.createCard.card })
+                this.allBoardLists[index].inputBox = ''
             }, (error) => {
                 console.log(error);
             });
@@ -175,6 +174,7 @@ export default {
 
 <style scoped>
     .board-list{
+        vertical-align: top;
         width: 250px;
         display: inline-block;
         background-color: #EFEFEF ;
