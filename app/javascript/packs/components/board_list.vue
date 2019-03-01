@@ -6,7 +6,7 @@
                 <input type="text"
                        v-model="updateBoardList" v-on:keyup.enter="updateBoardListName(board_list.id, index, arguments[0])" id="board-input" style="display: none">
             </div>
-            <draggable element="ul" :options="{ group: 'board_list.cards.edges' }" v-for="edge in board_list.cards.edges" class="card-list">
+            <draggable element="ul" :options="{ group: 'board_list.cards.edges' }" v-for="edge in board_list.cards.edges" @start="dragStart()" @end="dragEnd()" :key="edge.node.id" class="card-list">
                 <li v-bind:for="'card_' + edge.node.id" v-text="edge.node.name" v-on:click="" class="card"></li>
             </draggable>
             <ul>
@@ -155,7 +155,6 @@ export default {
             });
         },
         createCard: function (board_list, index) {
-            //要対応 variables　response
             this.$apollo.mutate({
                 mutation: CREATE_CARD,
                 variables: {
@@ -169,6 +168,14 @@ export default {
                 console.log(error);
             });
         },
+        onstart: (e) => {
+            console.log("onstart")
+            console.log(e)
+        },
+        onend: (e) => {
+            console.log("onend")
+            console.log(e)
+        },
         switchBoardListName: function (e) {
             e.currentTarget.style.display="none";
             e.target.nextElementSibling.style.display="";
@@ -178,6 +185,11 @@ export default {
 </script>
 
 <style scoped>
+    .board-lists{
+        overflow-x:scroll;
+        width: 200vw;
+        padding-top: 8vmax;
+    }
     .board-list{
         vertical-align: top;
         width: 250px;

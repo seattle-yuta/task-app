@@ -4,7 +4,7 @@
             <label v-bind:for="'project_' + project.id">名前</label>
             <router-link :to="{ name: 'BoardList', params: { project_id: project.id }} ">{{ project.name }}</router-link>
         </div>
-        <div class="new-project">
+        <div class="project">
             <input v-model="newProject" type="text" class="input-project">
             <input type="button" value="プロジェクトを追加" v-on:click="createProject" >
         </div>
@@ -63,19 +63,15 @@
 </script>
 
 <style scoped>
-    .input-project{
-        width: 50%;
+    .projects {
+        padding-top: 8vmax;
     }
     .project{
+        font-size: larger;
         display: inline-block;
         background-color:  #ccc;
         border: solid 2px #039be5;
         padding: 50px;
         margin : 30px;
-    }
-    .new-project{
-        background-color:  #EFEFEF;
-        padding: 20px;
-        margin : 10px;
     }
 </style>

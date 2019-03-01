@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="todo-header">
         <ul id="dropdown" class="dropdown-content">
             <li><router-link to="/">Top</router-link></li>
         </ul>
@@ -21,3 +21,10 @@
         </nav>
     </div>
 </template>
+
+<style scoped>
+    .todo-header{
+        width: 100%;
+        position: fixed;
+    }
+</style>
