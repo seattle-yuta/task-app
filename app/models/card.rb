@@ -4,8 +4,11 @@ class Card < ApplicationRecord
 
     validates :name, presence: true
 
-    scope :desc_display_order, -> {
-        order(display_order: :desc)
+    scope :search_card, -> (status){
+        s = where(name: status.name)
+        s = s.where(display_order: status.display_order) unless status.display_order.blank?
+        s = s.where(detail: status.detail) unless status.detail.blank?
+        s
     }
 
 end
