@@ -4,8 +4,10 @@ class Card < ApplicationRecord
 
     validates :name, presence: true
 
-    scope :desc_display_order, -> {
-        order(display_order: :desc)
+    scope :search_cards, lambda { |query|
+        s = where(display_order: query[:display_order])
+        s = s.where('name LIKE ?', "%#{query[:name]}%") unless query[:name].blank?
+        s = s.where('detail LIKE ?', "%#{query[:detail]}%") unless query[:detail].blank?
+        s
     }
-
 end
